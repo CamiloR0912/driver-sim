@@ -1,0 +1,42 @@
+# ---------- Node / Vite ----------
+node_modules/
+dist/
+dist-ssr/
+*.local
+.vite/
+*.tsbuildinfo
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ---------- Tauri / Rust ----------
+src-tauri/target/
+src-tauri/gen/schemas/
+src-tauri/WixTools/
+**/*.rs.bk
+
+# ---------- Variables de entorno ----------
+.env
+.env.*
+!.env.example
+
+# ---------- Editores ----------
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ---------- Sistema operativo ----------
+.DS_Store
+Thumbs.db
+Desktop.ini
