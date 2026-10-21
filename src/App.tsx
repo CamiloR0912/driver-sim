@@ -46,12 +46,20 @@ export default function App() {
             <span>Drivers y E/S</span>
           </div>
         </div>
-        {TABS.map(({ id, label, icon: Icon }) => (
-          <button key={id} type="button" className={`nav-item ${tab === id ? "active" : ""}`} onClick={() => setTab(id)}>
-            <Icon />
-            <span>{label}</span>
-          </button>
-        ))}
+        <div className="bus">
+          {TABS.map(({ id, label, icon: Icon }) => (
+            <button
+              key={id}
+              type="button"
+              className={`nav-item ${tab === id ? "active" : ""}`}
+              aria-current={tab === id ? "page" : undefined}
+              onClick={() => setTab(id)}
+            >
+              <Icon />
+              <span>{label}</span>
+            </button>
+          ))}
+        </div>
         <div className="sidebar-foot">Sistemas Operativos · Equipo 3</div>
       </nav>
 

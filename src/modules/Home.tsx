@@ -54,7 +54,7 @@ export default function Home({ onOpen }: { onOpen: (id: ModuleId) => void }) {
             <h2>{title}</h2>
             <p>{text}</p>
             {question && <span className="home-question">{question}</span>}
-            <span className="home-go">Abrir simulador →</span>
+            <span className="home-go">Abrir simulador</span>
           </button>
         ))}
       </div>

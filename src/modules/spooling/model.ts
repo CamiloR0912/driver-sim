@@ -54,7 +54,7 @@ export interface SpoolState {
   nextJob: number;
 }
 
-export const COLORS = ["#2e75b6", "#d4691b", "#3f8a4b", "#8e44ad"];
+export const COLORS = ["#2c3cc9", "#d2550e", "#1d7f47", "#8e44ad"];
 const APPS = ["Word", "Excel", "PDF", "Navegador"];
 const DEFAULT_PAGES = [3, 2, 4, 2];
 
