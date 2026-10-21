@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Callout, ModuleHeader, Panel, Toggle } from "../../components/ui";
+import { ModuleHeader, Panel, Toggle } from "../../components/ui";
 import {
   BAUDS,
   CALLBACKS,
@@ -527,13 +527,6 @@ export default function LifecycleSim() {
           ))}
         </div>
       </Panel>
-
-      <Callout tone="orange" title="Recorrido sugerido para la exposición">
-        1) Conecta el dispositivo (probe). 2) Abre desde el Proceso A y haz read(): no hay datos, así que se duerme. 3)
-        Pulsa “Llegan datos”: la ISR atiende rápido, el bottom half copia el dato y despierta al proceso. 4) Escribe en la
-        pantalla con write() y cambia los baudios con ioctl(). 5) Suspende y reanuda. 6) Activa el fallo de hardware y
-        haz write(): verás timeouts, reintentos y reset. 7) Para el final: “Dormir dentro de la ISR”.
-      </Callout>
 
       {s.panic && <PanicScreen onReboot={reboot} />}
     </div>
