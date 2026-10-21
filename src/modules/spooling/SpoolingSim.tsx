@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useLoop } from "../../hooks/useLoop";
-import { Callout, ModuleHeader, Panel, PlayControls, Segmented, Slider, Stat } from "../../components/ui";
+import { ModuleHeader, Panel, PlayControls, Segmented, Slider, Stat } from "../../components/ui";
 import { initState, isMixed, makeProcs, spoolFile, spoolWriteTime, start, step, togglePaper, type Mode, type Proc, type SpoolState } from "./model";
 
 const MODES: { value: Mode; label: string }[] = [
@@ -308,12 +308,6 @@ export default function SpoolingSim() {
         <Stat label="Procesos trabajando" value={sim.procs.filter((p) => p.status === "working").length} tone="green" />
         <Stat label="Trabajos en cola" value={sim.queue.length} />
       </div>
-
-      <Callout tone="orange" title="Para la exposición">
-        1) “Sin control”: las páginas salen intercaladas. 2) “Exclusivo”: salen ordenadas, pero los procesos pasan mucho
-        tiempo bloqueados. 3) “Con spooling”: salen ordenadas y los procesos se liberan casi de inmediato. Prueba también
-        quitar el papel a mitad de la impresión: con spooling los trabajos esperan en la cola sin bloquear a nadie.
-      </Callout>
     </div>
   );
 }

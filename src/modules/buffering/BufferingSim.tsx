@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useLoop } from "../../hooks/useLoop";
-import { Callout, ModuleHeader, Panel, PlayControls, Segmented, Slider, Stat, Toggle } from "../../components/ui";
+import { ModuleHeader, Panel, PlayControls, Segmented, Slider, Stat, Toggle } from "../../components/ui";
 import { IconChip, IconDisk } from "../../components/Icons";
 import { burstFactor, capacity, DEFAULT_SIZE, initState, occupancy, SIZE_RANGE, step, type BufState, type Mode, type Params } from "./model";
 
@@ -204,12 +204,6 @@ export default function BufferingSim() {
           </ul>
         </Panel>
       </div>
-
-      <Callout tone="orange" title="Para la exposición">
-        Prueba “Ráfagas (red)” con el buffer simple y luego con el circular de 12 posiciones: con el mismo promedio de
-        datos, el anillo absorbe la ráfaga y no pierde nada. Después activa el control de flujo con “Productor rápido”:
-        ya no se pierden datos, pero el dispositivo tiene que esperar.
-      </Callout>
     </div>
   );
 }
